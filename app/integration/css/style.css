@@ -44,7 +44,7 @@ body {/* background-color: coral; */
         width:auto;
     }
 
-.nav{ 
+.nav { 
     background: linear-gradient(to top, var(--TROIS), var(--QUATRE)); 
     /* background-color: var(--TROIS); */
     height:90px;
@@ -82,7 +82,7 @@ h1 {
 a.button {
     margin-top:80px;
 }
-.button{
+.button {
     display: block;
  
     text-decoration: none;
@@ -101,7 +101,7 @@ a.button {
     -o-transition: all 0.5s; */
     transition: all 0.5s;
 }
-.button:hover{
+.button:hover ,.button-produit:hover{
     background-color:var(--TEXTFOND);
     border: 2px solid var(--TROIS);
     box-shadow: 10px 5px 5px var(--DEUX);
@@ -109,7 +109,10 @@ a.button {
     text-align: center;
     font-size: 22px;
 }
-p{ color:var(--TEXTFOND);
+
+
+
+p, h2{ color:var(--TEXTFOND);
 
 
 }
@@ -214,7 +217,7 @@ a{ text-decoration: none;
     grid-template-columns: 1fr 1fr;
 }
 
-  /* catalogue */
+  /************************ catalogue *******************************/
 
 /* Conteneur principal en grille */
 .grid-container {
@@ -230,14 +233,14 @@ a{ text-decoration: none;
   }
   
   /* Conteneur de l'image */
-  .image-container {
+  .image-container-catalogue {
  
     display: flex;
     justify-content: center;
     align-items: center;
     background-image: url('../../../docs/demande-client/00.assets/coffees/302932754.png'); 
     
-    
+    border-radius: 25px 10px;
     background-size: cover;
     background-position: center;
     height: 100%; /* Prend toute la hauteur de la grille */
@@ -245,19 +248,6 @@ a{ text-decoration: none;
 } 
 
 
-  /*.notreCatalogue{
-    display: grid;
- 
-    grid-template-columns: 1fr 80% 1fr;  Définit trois colonnes : 1fr, 80%, 1fr */
-     /* gap: 20px;Ajoute un espacement entre les colonnes 
-    width: 100vw; /* Optionnel : occupe toute la hauteur de l'écran 
-    align-items: center; /* Centre les éléments verticalement 
-    text-align: center;
-}*/
-/* .image-catalogue{
-    width:100%;
-    height: auto;
-} */
 
 .catalogueCategorie {
     display:grid;
@@ -283,9 +273,103 @@ a{ text-decoration: none;
   
  
 }
-/* .image-catalogue{
-width:100%;
-z-index: 3;
+
+
+  /************************ produit *******************************/
+
+
+  .button-produit {
+    display: block;
  
-} */
+    text-decoration: none;
+    margin: 20px ; /* Centre le bouton horizontalement avec auto */
+    background-color: var(--TROIS);
+    border-radius: 20px 10px;
+    border: 4px double var(--QUATRE);
+    color: var(--TEXTFOND);
+    text-align:center;
+    font-size: 20px;
+    padding: 10px;
+    width: 200px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+  .image-container-produit {
  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../../docs/demande-client/00.assets/coffees/589100954.png'); 
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5); /* Flou augmenté */
+    border-radius: 25px 10px;
+    background-size: cover;
+    background-position: center;
+    height: 100%; /* Prend toute la hauteur de la grille */
+ 
+}  
+
+.grid-container-produit{
+
+    display: grid;
+    margin-top: 50px; 
+   grid-template-columns: 1fr 80% 1fr;  /* Trois colonnes : 1fr - 80% - 1fr */
+   height: 250px; /*  Hauteur de la fenêtre */
+}
+
+
+.text-zone {
+    border-radius: 2px solid var(--DEUX);
+    border-radius: 25px 10px;
+    box-shadow: 0 0 30px var(--DEUX);
+
+
+}
+.text-zone-paddind-left {
+    margin-left: 30px;
+}.text-zone-paddind-right {
+    margin-left: 75%;
+}
+
+ /************************ 404*******************************/
+
+/* Grille principale */
+.grid-container-404 {
+  display: grid;
+  grid-template-columns: 1fr 60% 1fr; /* Trois colonnes : 1fr, 60%, 1fr */
+  height: 100vh; /* Hauteur totale de la fenêtre */
+  margin: 0;
+  padding: 0;
+}
+
+/* Conteneur de l'image */
+.image-container-404 {
+  margin-top:100px;
+  display: flex;
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */ 
+  background-image: url('../../../docs/demande-client/00.assets/about.jpg');
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5); /* Ajoute un flou au contour */
+  border-radius: 25px 10px; /* Coins arrondis */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 400px; /* Remplit toute la hauteur de la cellule */
+  width: auto; /* Ajuste l'image à toute la largeur de la cellule */
+}
+
+.message{
+
+   margin-top: 40px;
+   height:80px;
+   /* background-color: chartreuse; */
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+
+
+}
+
+
+
