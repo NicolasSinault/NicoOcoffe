@@ -1,0 +1,510 @@
+
+:root {
+    --un:#B28E42;
+    --DEUX:#B25642;
+    --TROIS:#cf300e;
+    --QUATRE:#871f08;
+    --TEXTFOND:#EFE7E2;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+     font-family: "Roboto", sans-serif; 
+    
+}
+.CouleurTexte{
+    color:var(--TEXTFOND);
+}
+
+.imagedefond {
+    position: relative;
+    width: 100%;
+  }
+  
+  .imagedefond::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-image: url('../../../docs/demande-client/00.assets/coffees/256505890.png'); */
+    background-image: url('/images/256505890.png'); 
+   
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.3);
+    z-index: -3; /* Assure que l'image est en arrière-plan */
+  }
+
+
+.logo { height:70px;
+        width:auto;
+    }
+
+.nav { 
+    background: linear-gradient(to top, var(--TROIS), var(--QUATRE)); 
+    /* background-color: var(--TROIS); */
+    height:90px;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    padding:0 90px;
+  
+}
+.nav-list{ display:flex;
+           list-style-type: none;
+           text-decoration: none;
+           gap :40px;
+           padding:0;
+           
+
+}
+.nav-item a{
+    text-decoration: none;
+    
+}
+
+.nav-inem a:hover{
+    font-weight: bold;
+}
+h1 {
+    color: var(--TEXTFOND)
+
+
+}
+h1.accueil {
+    padding-left:5px;
+    padding-right:5px;
+}
+.titreAccueil{
+    margin-top:40px ;
+}
+
+/* bouton vers la page catalogue */
+a.button {
+    margin-top:30px;
+}
+.button {
+    display: block;
+ 
+    text-decoration: none;
+    margin: 20px auto; /* Centre le bouton horizontalement avec auto */
+    background-color: var(--TROIS);
+    border-radius: 20px 10px;
+    border: 4px double var(--QUATRE);
+    color: var(--TEXTFOND);
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    width: 200px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.button:hover ,.button-produit:hover{
+    background-color:var(--TEXTFOND);
+    border: 2px solid var(--TROIS);
+    box-shadow: 10px 5px 5px var(--DEUX);
+    color: var(--DEUX);
+    text-align: center;
+    font-size: 22px;
+}
+
+.buttonCatalogue{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+
+    height:auto;
+    place-items: center;
+  
+
+}  
+
+
+
+p, h2{ color:var(--TEXTFOND);
+
+
+}
+a{ text-decoration: none;
+  color:var(--TEXTFOND);
+  font-weight:bold;
+}
+.accueilTitreImage{
+    margin-top: 40px;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.imageContainer {
+    text-align: center; /* Centre l'image dans sa colonne */
+}
+
+.imageDroite {
+    width: 100%; /* Ajuste la taille de l'image, si nécessaire */
+    max-width: 350px; /* Fixe une largeur maximale pour éviter que l'image soit trop grande */
+    border-radius: 10px; /* Optionnel : ajoute des coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajoute une ombre subtile */
+}
+
+.tittleTextlink {
+    text-align: center; /* Centre le contenu à l'intérieur de cette div */
+}
+
+.tittleTextlink h1 {
+    margin: 0 auto; /* Centrer horizontalement le titre */
+}
+
+.accueil-notreAccroche{
+    padding-top: 30px;
+    height:auto;
+    width:90%;
+    display: flex; /* Active Flexbox pour centrer le contenu */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    margin: 0 auto; /* Centre le conteneur lui-même par rapport à son parent*/
+    transition: transform 0.3s, box-shadow 0.3s; /* Animation lors du survol */
+}
+.accueil-notreAccroche:hover {
+  
+    transform: scale(1.05); /* Agrandit légèrement lors du survol */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2); }/* Accentue l'ombre au survol */
+
+
+.nouveautés-titre{
+    display:grid;
+    grid-template-columns: 1fr ;
+    justify-items: center;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.card{
+    height:90%;
+    width:90%;
+    padding:5px;
+    text-align:center;
+    margin-right: auto;
+    margin-left: auto;
+}
+.buttonC{
+    display: block;
+    text-decoration: none;
+    margin: 20px auto; /* Centre le bouton horizontalement avec auto */
+    background-color: var(--TROIS);
+    border-radius: 20px 10px;
+    border: 4px double var(--QUATRE);
+    color: var(--TEXTFOND);
+    text-align: center;
+    font-size: 15px;
+    padding: 10px;
+    width: 100px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.buttonC:hover{
+    background-color:var(--TEXTFOND);
+    border: 2px solid var(--TROIS);
+    box-shadow: 10px 5px 5px var(--DEUX);
+    color: var(--DEUX);
+    text-align: center;
+    font-size: 18px;
+}
+
+
+/* footer */
+.footerContent{ 
+    display:flex;
+    align-items: center;
+    padding:0 90px;
+    height:100px;
+    justify-content: space-around;
+    color:var(--TEXTFOND)
+}
+
+
+
+.accueilTitreImage2{
+   
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+  /************************ catalogue *******************************/
+
+/* Conteneur principal en grille */
+.grid-container {
+    display: grid;
+    margin-top: 50px;
+    grid-template-columns: 1fr 80% 1fr; /* Trois colonnes : 1fr - 80% - 1fr */
+    height: 250pX; /* Hauteur de la fenêtre */
+  }
+  
+  /* Colonnes vides sur les côtés */
+  .empty-space {
+    background-color: transparent; /* Espace vide */
+  }
+  
+  /* Conteneur de l'image */
+  .image-container-catalogue {
+ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/images/302932754.png'); 
+    
+    border-radius: 25px 10px;
+    background-size: cover;
+    background-position: center;
+    height: 100%; /* Prend toute la hauteur de la grille */
+ 
+} 
+
+
+
+.catalogueCategorie {
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:10px;
+}
+.droiteCategorie {
+    display: flex; /* Active Flexbox pour centrer le contenu dans la cellule */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+  
+ 
+}
+.voirTout {
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:10px;}
+
+.gaucheVoirTout  {
+    display: flex; /* Active Flexbox pour centrer le contenu dans la cellule */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+  
+ 
+}
+
+
+  /************************ produit *******************************/
+
+
+  .button-produit {
+    display: block;
+ 
+    text-decoration: none;
+    margin: 20px ; /* Centre le bouton horizontalement avec auto */
+    background-color: var(--TROIS);
+    border-radius: 20px 10px;
+    border: 4px double var(--QUATRE);
+    color: var(--TEXTFOND);
+    text-align:center;
+    font-size: 20px;
+    padding: 10px;
+    width: 200px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+  .image-container-produit {
+ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/images/589100954.png'); 
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5); /* Flou augmenté */
+    border-radius: 25px 10px;
+    background-size: cover;
+    background-position: center;
+    max-width: 100%;
+    height: auto;
+ 
+}  
+
+.grid-container-produit{
+
+    display: grid;
+    margin-top: 50px; 
+   grid-template-columns: 1fr 80% 1fr;  /* Trois colonnes : 1fr - 80% - 1fr */
+   height: 250px; /*  Hauteur de la fenêtre */
+}
+
+
+.text-zone {
+    border-radius: 2px solid var(--DEUX);
+    border-radius: 25px 10px;
+    box-shadow: 0 0 30px var(--DEUX);
+
+
+}
+.text-zone-paddind-left {
+    margin-left: 30px;
+}.text-zone-paddind-right {
+    margin-left: 75%;
+}
+
+ /************************ 404*******************************/
+.none{
+    display:none;
+}
+/* Grille principale */
+.grid-container-404 {
+  display: grid;
+  grid-template-columns: 1fr 60% 1fr; /* Trois colonnes : 1fr, 60%, 1fr */
+  height: 100vh; /* Hauteur totale de la fenêtre */
+  margin: 0;
+  padding: 0;
+}
+
+/* Conteneur de l'image */
+.image-container-404 {
+  justify-self: stretch;
+  margin-top:100px;
+  display: flex;
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */ 
+  background-image: url('/images/about.jpg');
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5); /* Ajoute un flou au contour */
+  border-radius: 25px 10px; /* Coins arrondis */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 400px; /* Remplit toute la hauteur de la cellule */
+  width: auto; /* Ajuste l'image à toute la largeur de la cellule */
+}
+
+.message{
+
+   margin-top: 40px;
+   height:80px;
+   /* background-color: chartreuse; */
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+
+
+}
+
+
+@media screen and (max-width:780px) {
+   
+    /* ok404 */
+    .footerContent{ 
+        flex-direction: column;  
+        height: auto;
+        margin-bottom:15px;
+        font-size:10px ;
+                }
+    /* ok 404 */
+    .displayNone{
+        text-align:center;
+        display:none;
+    }
+    /* ok404 */
+    .grid-container-404{
+        height:auto;
+
+    }
+    /* ok404 */
+    .message{
+        margin-top: 20px;
+        font-size: 12px;
+        word-wrap: break-word;
+
+    }
+    /* ok404 */
+    .grid-container-404 {
+        grid-template-columns: 1fr 99% 1fr;
+
+    }
+    /* ok404 */
+    .image-container-404 {
+        margin-top:20px;
+    
+}   /* ok404 */
+    .footer-mail-404{
+        padding-top: 5px;
+        padding-bottom: 10px;
+        margin-left: 0;
+    }
+
+
+   
+    .nav-list{ display:flex;
+        flex-direction: column;
+        gap:20px;
+   
+}
+    .nav{
+    height:auto;
+    display:flex;
+    flex-direction: column;
+    text-align:center;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+   
+            
+    }
+    /*catalogue*/
+    .catalogueCategorie{
+        grid-template-columns: 1fr;
+        place-items: center;
+        
+    }
+    a.button{
+        margin-top:0;
+    }
+    .cards{
+        grid-template-columns: 1fr ;
+      
+        
+    }
+    .card{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .voirTout {
+   
+        grid-template-columns:1fr;
+       
+    }
+    .button{margin:0}
+
+    .image-container-catalogue h1{
+        text-align: center;
+    }
+
+    /*accueil*/
+    .accueilTitreImage{
+        margin-top: 20px;
+        grid-template-columns: 1fr ;
+    }
+
+    .accueilTitreImage2{
+        grid-template-columns: 1fr;
+    }
+    a.button {
+        margin-top:30px;
+    }
+    .buttonCatalogue{
+        display:grid;
+        grid-template-columns:1fr;
+    
+      
+      
+    
+    }  
+
+
+
+
+
+}

@@ -2,6 +2,8 @@ import express from "express";
 import path from "node:path";
 import { router } from "./app/router/router.js";
 import dotenv from "dotenv";
+const port = 3000;
+
 dotenv.config();
 const app = express();
 app.set("view engine", "ejs");
@@ -11,6 +13,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(router);
 
 
-app.listen(process.env.port, () => {
-    console.log(`Example app listening on port ${process.env.port}`);
-});
+// Démarrer le serveur
+app.listen(port, () => {
+    console.log(`Serveur en écoute sur http://localhost:${port}`);
+  });
+
+
+// app.listen(process.env.port, () => {
+//     console.log(`Example app listening on port ${process.env.port}`);});

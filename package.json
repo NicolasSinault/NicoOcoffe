@@ -1,19 +1,30 @@
 {
-  "name": "template",
+  "name": "projet-s09-nicolassinault",
   "version": "1.0.0",
+  "description": "## Information du projet",
   "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node --watch index.js"
   },
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/O-clock-Tiramisu/Projet-S09-NicolasSinault.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "bugs": {
+    "url": "https://github.com/O-clock-Tiramisu/Projet-S09-NicolasSinault/issues"
+  },
+  "homepage": "https://github.com/O-clock-Tiramisu/Projet-S09-NicolasSinault#readme",
   "dependencies": {
     "dotenv": "^16.4.7",
     "ejs": "^3.1.10",
-    "express": "^4.21.2",
-    "pg": "^8.14.1"
+    "express": "^5.1.0"
   }
 }
