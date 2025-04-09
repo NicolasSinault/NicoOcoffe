@@ -1,3 +1,7 @@
+import { pgPool } from '../../config/pgPool.js';
+import dotenv from 'dotenv';
+// recupere les infos de datamapper.js
+import * as GeneralDataMapper from "../folderDataMappers/GeneralDatamapper.js"
 
 
 export const pageAccueil=(req,res)=>{
