@@ -41,7 +41,7 @@ export const list3 = async (req, res) => {
 
         const allCafes = await GeneralDataMapper.findAll();
            // une fonction de controller render la vue et passe les données pour que la vue les utilise
-           //console.log("Données récupérées depuis la BDD :", cafes);
+           console.log("Données récupérées depuis la BDD :", allCafes);
 
            //console.log(allCafes)  ok bon retour des infos
            res.render("catalogueTotal",{allCafes});
@@ -53,6 +53,21 @@ export const list3 = async (req, res) => {
 
 
 
+export const showProduct = async (req, res) => {
+    try {
+        const productId = req.params.id; // Récupérer l'ID depuis l'URL
+        const product = await GeneralDataMapper.findById(productId); // Méthode pour récupérer un produit par son ID
+
+        if (!product) {
+            return res.status(404).send("Produit non trouvé");
+        }
+
+        res.render("produit", { product }); // Passer les détails du produit à la vue
+    } catch (error) {
+        console.error("Erreur lors de la récupération des détails du produit :", error);
+        res.status(500).send("Erreur lors de l'appel à la bdd");
+    }
+};
 
 
 

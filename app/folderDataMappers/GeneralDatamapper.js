@@ -52,3 +52,18 @@ export const findAll = async () => {
 };
 
 
+export const findById = async (id) => {
+    try {
+        // Utilisation d'une requête SQL pour sélectionner un produit par son ID
+        const query = "SELECT * FROM cafe WHERE id = $1";
+        const values = [id]; // Utilisation de paramètres pour éviter les injections SQL
+
+        const { rows } = await pgPool.query(query, values);
+
+        // Retourne le premier élément du résultat, car l'ID est unique
+        return rows[0];
+    } catch (error) {
+        throw error;
+    }
+};
+

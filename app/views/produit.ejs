@@ -1,14 +1,25 @@
-
-<%- include('partials/headerProduit.ejs') %>
+<%- include('partials/header.ejs') %>
 
     <div class="grid-container">
         <div class="empty-space"></div>
         <div class="image-container-produit"></div>
         <div class="empty-space"></div>
     </div>
-
-
     <div class="grid-container-produit">
+        <div class="empty-space"></div>
+        <div class="text-zone">
+            <p class="text-zone-paddind-right">Publié le<%= product.date %></p>
+            <h2 class="text-zone-paddind-left"><%= product.type %></h2>
+            <p class="text-zone-paddind-left"><%= product.description %></p>
+            <a href="/catalogue" class="button-produit text-zone-paddind">catalogue</a>
+        </div>
+        <div class="empty-space"></div>
+    </div>
+
+<%-include('partials/footer.ejs') %>
+
+
+ <!-- <div class="grid-container-produit">    affiche bien mon css
         <div class="empty-space"></div>
         <div class="text-zone">
 
@@ -18,8 +29,5 @@
             <a href="/catalogue" class="button-produit text-zone-paddind">catalogue</a>
         </div>
         <div class="empty-space"></div>
-    </div>
-
-    <%-include('partials/footer.ejs') %>
-
+    </div>  -->
 

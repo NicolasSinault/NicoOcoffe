@@ -22,7 +22,9 @@ router.get("/catalogue/",GeneralController.list2);
 //*router.get("/catalogue/",GeneralController.list);
 //router.get("/catalogueTotal/",GeneralController.pageCatalogueTotal);
 router.get("/catalogueTotal/",GeneralController.list3);
-router.get("/produit/",GeneralController.pageProduit);
+//router.get("/produit/",GeneralController.pageProduit);
+//router.get("/produit/:id",GeneralController.showProduct);
+router.get("/produit/:id",GeneralController.showProduct);
 
 router.get("/erreur404",GeneralController.pageErreur);
 

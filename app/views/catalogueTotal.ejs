@@ -22,10 +22,12 @@
     <article>
         <div class=" cards">
             <% allCafes.forEach(cafe => { %>
+          
                 <div class="card card-text ">
                     <h3><%= cafe.type %></h3> 
                     <P><%= cafe.description %></P>
-                    <a href="#catalogue" class="buttonC">découvrir</a>
+                    <a href="/produit/<%= cafe.id %>" class="buttonC" >découvrir</a>
+                   
                 </div> <% }) %>
     
 
@@ -64,8 +66,7 @@
             </div>  -->
         </div>
     </article>
-
-    <%-include('partials/footer.ejs') %>
+<%-include('partials/footer.ejs') %>
 
 
 
