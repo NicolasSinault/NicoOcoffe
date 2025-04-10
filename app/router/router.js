@@ -20,7 +20,8 @@ router.get("/accueil/",GeneralController.list);
 router.get("/catalogue/",GeneralController.list2);
 //outer.get("/catalogue/",GeneralController.pageCatalogue);
 //*router.get("/catalogue/",GeneralController.list);
-
+//router.get("/catalogueTotal/",GeneralController.pageCatalogueTotal);
+router.get("/catalogueTotal/",GeneralController.list3);
 router.get("/produit/",GeneralController.pageProduit);
 
 router.get("/erreur404",GeneralController.pageErreur);

@@ -20,44 +20,51 @@
     </div>
 
     <article>
-        <!-- <div class=" cards">
-            <div class="card">
+        <div class=" cards">
+            <% allCafes.forEach(cafe => { %>
+                <div class="card card-text ">
+                    <h3><%= cafe.type %></h3> 
+                    <P><%= cafe.description %></P>
+                    <a href="#catalogue" class="buttonC">découvrir</a>
+                </div> <% }) %>
+    
 
+            <!--ok responsive comme ca-->
+            <!-- <div class="card">
                 <p class="card-text">Chaque tasse est une invitation à savourer la richesse et les nuances du café.
                     Explorez nos sélections exclusives et laissez-vous séduire.</p>
                 <a href="#catalogue" class="buttonC">découvrir</a>
-            </div> -->
-            <div class=" cards">
-                <% threeFirst.forEach(cafe => { %>
-             <div class="card card-text ">
-                 <h3><%= cafe.type %></h3> 
-                 <P><%= cafe.description %></P>
-                 <a href="#catalogue" class="buttonC">découvrir</a>
-             </div> <% }) %>
- 
-
-            <!-- <div class="card">
-
+            </div> 
+            <div class="card">
                 <p class="card-text">Chaque tasse est une invitation à savourer la richesse et les nuances du café.
                     Explorez nos sélections exclusives et laissez-vous séduire.</p>
                 <a href="#catalogue" class="buttonC">découvrir</a>
             </div>
             <div class="card">
-
                 <p class="card-text">Chaque tasse est une invitation à savourer la richesse et les nuances du café.
                     Explorez nos sélections exclusives et laissez-vous séduire.</p>
                 <a href="#catalogue" class="buttonC">découvrir</a>
-            </div> -->
+            </div> 
+
+
+            <div class="card">
+                <p class="card-text">Chaque tasse est une invitation à savourer la richesse et les nuances du café.
+                    Explorez nos sélections exclusives et laissez-vous séduire.</p>
+                <a href="#catalogue" class="buttonC">découvrir</a>
+            </div> 
+            <div class="card">
+                <p class="card-text">Chaque tasse est une invitation à savourer la richesse et les nuances du café.
+                    Explorez nos sélections exclusives et laissez-vous séduire.</p>
+                <a href="#catalogue" class="buttonC">découvrir</a>
+            </div>
+            <div class="card">
+                <p class="card-text">Chaque tasse est une invitation à savourer la richesse et les nuances du café.
+                    Explorez nos sélections exclusives et laissez-vous séduire.</p>
+                <a href="#catalogue" class="buttonC">découvrir</a>
+            </div>  -->
         </div>
     </article>
 
-    <div class="voirTout">
-        <div class="gaucheVoirTout"><a href="/catalogueTotal" class="button ">Voir Tout</a></div>
-        <div class="centre">" "</div>
-        <div class="droite">" "</div>
-
-
-    </div>
     <%-include('partials/footer.ejs') %>
 
 

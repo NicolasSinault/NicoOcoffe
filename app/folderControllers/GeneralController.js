@@ -36,6 +36,22 @@ export const list2 = async (req, res) => {
 
 
 
+export const list3 = async (req, res) => {
+    try {
+
+        const allCafes = await GeneralDataMapper.findAll();
+           // une fonction de controller render la vue et passe les données pour que la vue les utilise
+           //console.log("Données récupérées depuis la BDD :", cafes);
+
+           //console.log(allCafes)  ok bon retour des infos
+           res.render("catalogueTotal",{allCafes});
+        
+    } catch (error) {
+        res.status(500).send("Erreur lors de l'appel à la bdd");
+    }
+};
+
+
 
 
 
@@ -49,6 +65,11 @@ export const pageAccueil=(req,res)=>{
 export const pageCatalogue=(req,res)=>{
     res.render("catalogue");
 }
+
+export const pageCatalogueTotal=(req,res)=>{
+    res.render("catalogueTotal");
+}
+
 
 
 export const pageProduit=(req,res)=>{
