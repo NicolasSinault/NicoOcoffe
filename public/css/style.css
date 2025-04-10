@@ -69,18 +69,9 @@ body {
 .nav-inem a:hover{
     font-weight: bold;
 }
-h1,h3{
-    color: var(--TEXTFOND)
-
-
-}
-h1.accueil {
-    padding-left:5px;
-    padding-right:5px;
-}
-.titreAccueil{
-    margin-top:40px ;
-}
+h1{
+    color: var(--TEXTFOND)}
+h3{ color: var(--un)}
 
 /* bouton vers la page catalogue */
 a.button {
@@ -173,6 +164,7 @@ a{ text-decoration: none;
 
 
 .nouveautés-titre{
+    
     display:grid;
     grid-template-columns: 1fr ;
     justify-items: center;

@@ -9,13 +9,36 @@ export const list = async (req, res) => {
         const cafes = await GeneralDataMapper.find3last();
            // une fonction de controller render la vue et passe les données pour que la vue les utilise
            //console.log("Données récupérées depuis la BDD :", cafes);
-           console.log(cafes)
+           //console.log(cafes)
            res.render("accueil",{cafes});
         
     } catch (error) {
         res.status(500).send("Erreur lors de l'appel à la bdd");
     }
 };
+
+
+
+export const list2 = async (req, res) => {
+    try {
+
+        const threeFirst = await GeneralDataMapper.find3First();
+           // une fonction de controller render la vue et passe les données pour que la vue les utilise
+           //console.log("Données récupérées depuis la BDD :", cafes);
+
+           //console.log(allCafes)  ok bon retour des infos
+           res.render("catalogue",{threeFirst});
+        
+    } catch (error) {
+        res.status(500).send("Erreur lors de l'appel à la bdd");
+    }
+};
+
+
+
+
+
+
 
 
 export const pageAccueil=(req,res)=>{
