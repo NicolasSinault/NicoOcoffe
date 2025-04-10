@@ -44,4 +44,4 @@ error: object file .git/objects/c3/0faa6c45205deaad444f3964e996579672f5bd is emp
 error: HEAD: invalid sha1 pointer c30faa6c45205deaad444f3964e996579672f5bd
 notice: No default references
 dangling blob 6179ae14ec29114e7296f8ff37b3198c5f64299d
-student@teleporter:/var/www/html/S09/Projet-S09-NicolasSinault$ 
+student@teleporter:/var/www/html/S09/Projet-S09-NicolasSinault$ .
