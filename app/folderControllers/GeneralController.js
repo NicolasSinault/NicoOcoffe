@@ -2,13 +2,15 @@ import { pgPool } from '../../config/pgPool.js';
 import dotenv from 'dotenv';
 // recupere les infos de datamapper.js
 import * as GeneralDataMapper from "../folderDataMappers/GeneralDatamapper.js"
+
 export const list = async (req, res) => {
     try {
 
-        const cafes = await GeneralDataMapper.findAll();
+        const cafes = await GeneralDataMapper.find3last();
            // une fonction de controller render la vue et passe les données pour que la vue les utilise
-           console.log("Données récupérées depuis la BDD :", cafes);
-           res.render("catalogue");
+           //console.log("Données récupérées depuis la BDD :", cafes);
+           console.log(cafes)
+           res.render("accueil",{cafes});
         
     } catch (error) {
         res.status(500).send("Erreur lors de l'appel à la bdd");
@@ -34,3 +36,5 @@ export const pageProduit=(req,res)=>{
 export const pageErreur=(req,res)=>{
     res.render("erreur404");
 }
+
+

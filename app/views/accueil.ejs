@@ -22,8 +22,6 @@
          
             <figure>
                 <div class="imageContainer">
-                <!-- <img src="../../docs/demande-client/00.assets/coffees/105589090.png"  alt="du café plein les mains" class="imageDroite"> -->
-                <!-- <img src="/images/105589090.png"  alt="du café plein les mains" class="imageDroite"> -->
                 <img src="/images/105589090.png " alt="du café plein les mains" class="imageDroite">
             </div>
             </figure>
@@ -32,16 +30,20 @@
         <a href="/catalogue" class="button ">catalogue</a>
     </div>
     <div class="accueilTitreImage2"> 
-        <!-- <a href="# lien vers la page  catalogue" class="button">nouveautés</a> -->
-    
             <div class="nouveautés-titre">
-                <h2>nouveautés</h2>
+                <h2>Nos nouveautés</h2>
             </div>    
     </div>
     <article>
         <div class=" cards">
-            <div class="card">
-            
+               <% cafes.forEach(cafe => { %>
+            <div class="card card-text ">
+                <h3><%= cafe.type %></h3> 
+                <P><%= cafe.description %></P>
+                <a href="#catalogue" class="buttonC">découvrir</a>
+            </div> <% }) %>
+
+            <!-- <div class="card">
                 <p class="card-text">Chaque tasse est une invitation à savourer la richesse et les nuances du café. Explorez nos sélections exclusives et laissez-vous séduire.</p>
                 <a href="#catalogue" class="buttonC">découvrir</a>
             </div>
@@ -49,12 +51,7 @@
             
                 <p class="card-text">Chaque tasse est une invitation à savourer la richesse et les nuances du café. Explorez nos sélections exclusives et laissez-vous séduire.</p>
                 <a href="#catalogue" class="buttonC">découvrir</a>
-            </div>
-            <div class="card">
-            
-                <p class="card-text">Chaque tasse est une invitation à savourer la richesse et les nuances du café. Explorez nos sélections exclusives et laissez-vous séduire.</p>
-                <a href="#catalogue" class="buttonC">découvrir</a>
-            </div>
+            </div> -->
         </div>
     </article>
     <%-include('partials/footer.ejs') %>

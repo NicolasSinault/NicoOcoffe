@@ -10,11 +10,16 @@ export const router = express.Router();
 //     res.send("Hello World!");
 // });
 
-router.get("/",GeneralController.pageAccueil);
+// 
+router.get("/",GeneralController.list);
+
+router.get("/accueil/",GeneralController.list);
+
+//*router.get("/",GeneralController.pageAccueil);
 // affiche bien l'ensemble de la base dans le console.log terminal 
 
-//router.get("/catalogue/",GeneralController.pageCatalogue);
-router.get("/catalogue/",GeneralController.list);
+router.get("/catalogue/",GeneralController.pageCatalogue);
+//*router.get("/catalogue/",GeneralController.list);
 
 router.get("/produit/",GeneralController.pageProduit);
 

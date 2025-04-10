@@ -10,11 +10,14 @@ import dotenv from 'dotenv';
 //     }
 //     // pgPool.end();
 //  });
-export const findAll = async () => {
+
+// recupere les 3 derniers éléments pour l'affichage dans la page accueil
+export const find3last = async () => {
     try {
         // etant donné qu'on veut juste récupérer la propriété rows de l'objet Result généré par pgPool.query, cette syntaxe permet de créer une variable en partant de la propriété rows
         // destructuring d'objet
-        const { rows : cafes } = await pgPool.query("SELECT * FROM cafe");
+        //const { rows : cafes } = await pgPool.query("SELECT * FROM cafe");
+        const { rows : cafes } = await pgPool.query("SELECT * FROM cafe ORDER BY id DESC LIMIT 3");
         //console.log("resultat",cafes);
         return cafes;
     } catch (error) {

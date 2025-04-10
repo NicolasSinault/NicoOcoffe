@@ -69,7 +69,7 @@ body {
 .nav-inem a:hover{
     font-weight: bold;
 }
-h1 {
+h1,h3{
     color: var(--TEXTFOND)
 
 
