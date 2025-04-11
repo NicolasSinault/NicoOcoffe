@@ -12,26 +12,11 @@ export const router = express.Router();
 
 // 
 router.get("/",GeneralController.list);
-
 router.get("/accueil/",GeneralController.list);
-
-//*router.get("/",GeneralController.pageAccueil);
-// affiche bien l'ensemble de la base dans le console.log terminal 
 router.get("/catalogue/",GeneralController.list2);
-//outer.get("/catalogue/",GeneralController.pageCatalogue);
-//*router.get("/catalogue/",GeneralController.list);
-//router.get("/catalogueTotal/",GeneralController.pageCatalogueTotal);
 router.get("/catalogueTotal/",GeneralController.list3);
-//router.get("/produit/",GeneralController.pageProduit);
-//router.get("/produit/:id",GeneralController.showProduct);
 router.get("/produit/:id",GeneralController.showProduct);
-
 router.get("/erreur404",GeneralController.pageErreur);
-
-
-// router.use((req, res) => {  ça ca fout la merde ca empeche les images de s'afficher
-//     res.status(404).send("Sorry can't find that!");
-// });
 
 
 //exporte le routeur par defaut

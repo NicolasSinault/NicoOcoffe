@@ -19,40 +19,30 @@
             </article>
          
         </div>
-         
-            <figure>
-                <div class="imageContainer">
+            <figure class="imageContainer">
                 <img src="/images/105589090.png " alt="du café plein les mains" class="imageDroite">
-            </div>
             </figure>
-    </div>
-    <div class="buttonCatalogue">
-        <a href="/catalogue" class="button ">catalogue</a>
-    </div>
-    <div class="accueilTitreImage2"> 
-            <div class="nouveautés-titre">
-                <h2>Nos nouveautés</h2>
-            </div>    
-    </div>
-    <article>
-        <div class=" cards">
-               <% cafes.forEach(cafe => { %>
-            <div class="card card-text ">
-                <h3><%= cafe.type %></h3> 
-                <P><%= cafe.description %></P>
-                <a href="/produit/<%= cafe.id %>" class="buttonC">découvrir</a>
-            </div> <% }) %>
-
-            <!-- <div class="card">
-                <p class="card-text">Chaque tasse est une invitation à savourer la richesse et les nuances du café. Explorez nos sélections exclusives et laissez-vous séduire.</p>
-                <a href="#catalogue" class="buttonC">découvrir</a>
-            </div>
-            <div class="card">
             
-                <p class="card-text">Chaque tasse est une invitation à savourer la richesse et les nuances du café. Explorez nos sélections exclusives et laissez-vous séduire.</p>
-                <a href="#catalogue" class="buttonC">découvrir</a>
-            </div> -->
+    </div>
+        <div class="buttonCatalogue">
+            <a href="/catalogue" class="button ">catalogue</a>
         </div>
-    </article>
+    <section>
+        <div class="accueilTitreImage2"> 
+                <div class="nouveautés-titre">
+                    <h2>Nos nouveautés</h2>
+                </div>    
+        </div>
+        <article>
+            <div class=" cards">
+                <% cafes.forEach(cafe => { %>
+                <div class="card card-text ">
+                    <h3><%= cafe.type %></h3> 
+                    <P><%= cafe.description %></P>
+                    <a href="/produit/<%= cafe.id %>" class="buttonC">découvrir</a>
+                </div> <% }) %>
+            </div>
+        </article>
+    </section>    
     <%-include('partials/footer.ejs') %>
 

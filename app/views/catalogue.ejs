@@ -11,53 +11,35 @@
     </figure>
 
 
-    <div class="catalogueCategorie">
+    <section class="catalogueCategorie">
         <div class="gauche">" "</div>
         <div class="centre">" "</div>
         <div class="droiteCategorie">
             <a href="# lien vers la page  catalogue" class="button ">catégorie</a>
         </div>
-    </div>
+    </section>
 
     <article>
-        <!-- <div class=" cards">
-            <div class="card">
-
-                <p class="card-text">Chaque tasse est une invitation à savourer la richesse et les nuances du café.
-                    Explorez nos sélections exclusives et laissez-vous séduire.</p>
-                <a href="#catalogue" class="buttonC">découvrir</a>
-            </div> -->
-            <div class=" cards">
+    
+        <section class=" cards">
                 <% threeFirst.forEach(cafe => { %>
-             <div class="card card-text ">
+               <div class="card card-text ">
                  <h3><%= cafe.type %></h3> 
                  <P><%= cafe.description %></P>
                  <a href="/produit/<%= cafe.id %>" class="buttonC">découvrir</a>
              </div> <% }) %>
  
 
-            <!-- <div class="card">
-
-                <p class="card-text">Chaque tasse est une invitation à savourer la richesse et les nuances du café.
-                    Explorez nos sélections exclusives et laissez-vous séduire.</p>
-                <a href="#catalogue" class="buttonC">découvrir</a>
-            </div>
-            <div class="card">
-
-                <p class="card-text">Chaque tasse est une invitation à savourer la richesse et les nuances du café.
-                    Explorez nos sélections exclusives et laissez-vous séduire.</p>
-                <a href="#catalogue" class="buttonC">découvrir</a>
-            </div> -->
-        </div>
+        </section>
     </article>
 
-    <div class="voirTout">
+    <aside class="voirTout">
         <div class="gaucheVoirTout"><a href="/catalogueTotal" class="button ">Voir Tout</a></div>
         <div class="centre">" "</div>
         <div class="droite">" "</div>
 
 
-    </div>
+    </aside>
     <%-include('partials/footer.ejs') %>
 
 
