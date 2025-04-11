@@ -1,4 +1,4 @@
-<%- include('partials/header.ejs') %>
+<%- include('partials/headerProduit.ejs') %>
 
     <div class="grid-container">
         <div class="empty-space"></div>
@@ -8,10 +8,15 @@
     <div class="grid-container-produit">
         <div class="empty-space"></div>
         <div class="text-zone">
-            <p class="text-zone-paddind-right">Publié le<%= product.date %></p>
-            <h2 class="text-zone-paddind-left"><%= product.type %></h2>
-            <p class="text-zone-paddind-left"><%= product.description %></p>
-            <a href="/catalogue" class="button-produit text-zone-paddind">catalogue</a>
+            <p class="text-zone-paddind-right text-zone-center">Publié le 11 avril 2025</p>
+            
+            <h2 class="text-zone-paddind-left text-zone-center"><span class="Text-color-description"><%= product.type %></span></h2>
+            <p class="text-zone-paddind-left text-zone-center"><span class="Text-color-description">Description ; </span><%= product.description %></p>
+            <p class="text-zone-paddind-left text-zone-center"><span class="Text-color-description">Origine ; </span><%= product.origine %></p>
+            <p class="text-zone-paddind-left text-zone-center"><span class="Text-color-description">Prix ; </span><%= product.prix %> €</p>
+            <p class="text-zone-paddind-left text-zone-center"><span class="Text-color-description">Caracteristique ; </span><%= product.caracteristique %></p>
+            <p class="text-zone-paddind-left text-zone-center"><span class="Text-color-description">disponibilité ; </span><%= product.disponibilite %></p>
+            <a href="/catalogue" class="button-produit text-zone-paddind ">catalogue</a>
         </div>
         <div class="empty-space"></div>
     </div>

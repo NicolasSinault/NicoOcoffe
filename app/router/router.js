@@ -28,6 +28,7 @@ router.get("/produit/:id",GeneralController.showProduct);
 
 router.get("/erreur404",GeneralController.pageErreur);
 
+
 // router.use((req, res) => {  ça ca fout la merde ca empeche les images de s'afficher
 //     res.status(404).send("Sorry can't find that!");
 // });

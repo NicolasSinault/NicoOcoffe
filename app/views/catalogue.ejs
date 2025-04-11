@@ -4,7 +4,7 @@
         <div class="grid-container">
             <div class="empty-space"></div>
             <div class="image-container-catalogue">
-                <h1>Notre catalogue</h1>
+                <h1>une selection de notre catalogue</h1>
             </div>
             <div class="empty-space"></div>
         </div>
@@ -32,7 +32,7 @@
              <div class="card card-text ">
                  <h3><%= cafe.type %></h3> 
                  <P><%= cafe.description %></P>
-                 <a href="#catalogue" class="buttonC">découvrir</a>
+                 <a href="/produit/<%= cafe.id %>" class="buttonC">découvrir</a>
              </div> <% }) %>
  
 
