@@ -34,9 +34,10 @@ if (process.env.DATABASE_URL) {
   });
 }
 
-// export default pool;
+ //export default pool;
 // PORT=3000
 // PGUSER=nico
 // PGPASSWORD=nico
 // PGDATABASE=ocoffee
 
+export const pgPool = new Pool();
