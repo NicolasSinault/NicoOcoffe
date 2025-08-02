@@ -1,46 +1,44 @@
-
 <%- include('partials/headerCatalogue.ejs') %>
-   <figure>
-        <div class="grid-container">
-            <div class="empty-space"></div>
-            <div class="image-container-catalogue">
-                <h1>une selection de notre catalogue</h1>
-            </div>
-            <div class="empty-space"></div>
-        </div>
-    </figure>
 
-
-    <section class="catalogueCategorie">
-        <div class="gauche">" "</div>
-        <div class="centre">" "</div>
-        <div class="droiteCategorie">
-            <a href="# lien vers la page  catalogue" class="button ">catégorie</a>
+<figure>
+    <div class="gridContainer">
+        <div class="espacement1ligne"></div> <!-- Colonne vide -->
+        <div class="imageContainerCatalogue">
+            <h1>Une sélection de notre catalogue</h1>
         </div>
+        <div class="espacement1ligne"></div> <!-- Colonne vide -->
+    </div>
+</figure>
+
+<!-- hidden pour une utilisation ultérieure -->
+<section class="catalogueCategorie"> 
+    <!-- <div class="gauche"></div>
+    <div class="centre"></div> -->
+    <div class="espacement1Lign"></div>
+    <div class="espacement1Lign"></div>
+    <div class="droiteCategorie">
+        <a href="# lien vers la page catalogue" class="button">catégorie</a>
+    </div>
+</section>
+
+<article>
+    <section class="cards">
+        <% threeFirst.forEach(cafe => { %>
+            <div class="card card-text">
+                <h3><%= cafe.type %></h3> 
+                <p><%= cafe.description %></p>
+                <a href="/produit/<%= cafe.id %>" class="buttonC">découvrir</a>
+            </div> 
+        <% }) %>
     </section>
+</article>
 
-    <article>
-    
-        <section class=" cards">
-                <% threeFirst.forEach(cafe => { %>
-               <div class="card card-text ">
-                 <h3><%= cafe.type %></h3> 
-                 <P><%= cafe.description %></P>
-                 <a href="/produit/<%= cafe.id %>" class="buttonC">découvrir</a>
-             </div> <% }) %>
- 
+<aside class="voirTout">
+    <div class="gaucheVoirTout">
+        <a href="/catalogueTotal" class="button">Voir Tout</a>
+    </div>
+  <div class="espacement1Lign"></div>
+  <div class="espacement1Lign"></div>
+</aside>
 
-        </section>
-    </article>
-
-    <aside class="voirTout">
-        <div class="gaucheVoirTout"><a href="/catalogueTotal" class="button ">Voir Tout</a></div>
-        <div class="centre">" "</div>
-        <div class="droite">" "</div>
-
-
-    </aside>
-    <%-include('partials/footer.ejs') %>
-
-
-
+<%- include('partials/footer.ejs') %>

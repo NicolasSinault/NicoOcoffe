@@ -1,0 +1,42 @@
+
+/* ===== NAVIGATION (TOUTES PAGES) ===== */
+.nav { 
+    background: linear-gradient(to top, var(--rouge), var(--rouge-fonce)); 
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 90px;
+}
+
+.logo { 
+    height: 70px;
+    width: auto;
+}
+
+.logoAccueil {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--beige);
+    font-weight: bold;
+}
+
+.navList { 
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    padding: 0;
+}
+
+.navItem a {
+    text-decoration: none;
+    color: var(--beige);
+    font-weight: bold;
+}
+
+.navItem a.actualPage {
+    color: var(--or) !important;
+    font-weight: 900;
+    border-bottom: 3px solid var(--or);
+}

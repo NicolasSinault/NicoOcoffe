@@ -3,6 +3,17 @@ import dotenv from 'dotenv';
 // recupere les infos de datamapper.js
 import * as GeneralDataMapper from "../folderDataMappers/GeneralDatamapper.js"
 
+
+export const rgpd = (req, res) => {
+    try {
+        res.render('rgpd');
+    } catch (error) {
+        console.error('Erreur lors du chargement de la page RGPD:', error);
+        res.status(500).render('erreur500', { error });
+    }
+};
+
+
 export const list = async (req, res) => {
     try {
 
@@ -72,24 +83,6 @@ export const showProduct = async (req, res) => {
 
 
 
-export const pageAccueil=(req,res)=>{
-    res.render("accueil");
-}
-
-
-export const pageCatalogue=(req,res)=>{
-    res.render("catalogue");
-}
-
-export const pageCatalogueTotal=(req,res)=>{
-    res.render("catalogueTotal");
-}
-
-
-
-export const pageProduit=(req,res)=>{
-    res.render("produit");
-}
 
 
 export const pageErreur=(req,res)=>{

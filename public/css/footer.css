@@ -1,0 +1,16 @@
+/* ==================== FOOTER (TOUTES PAGES) ==================== */
+footer {
+    margin-top: auto;
+}
+
+.footerContent { 
+    display: flex;
+    align-items: center;
+    padding: 0 90px;
+    height: 100px;
+    justify-content: space-around;
+    color: var(--beige);
+}   
+.contact-rgpd {
+   display:inline-block
+}

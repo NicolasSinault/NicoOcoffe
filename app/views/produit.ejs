@@ -1,25 +1,47 @@
 <%- include('partials/headerProduit.ejs') %>
 
-    <div class="grid-container">
-        <div class="empty-space"></div>
-        <div class="image-container-produit"></div>
-        <div class="empty-space"></div>
-    </div>
-    <div class="grid-container-produit">
-        <div class="empty-space"></div>
-        <article class="text-zone">
-            <p class="text-zone-paddind-right text-zone-center">Publié le 11 avril 2025</p>
-            
-            <h2 class="text-zone-paddind-left text-zone-center"><span class="Text-color-description"><%= product.type %></span></h2>
-            <p class="text-zone-paddind-left text-zone-center"><span class="Text-color-description">Description ; </span><%= product.description %></p>
-            <p class="text-zone-paddind-left text-zone-center"><span class="Text-color-description">Origine ; </span><%= product.origine %></p>
-            <p class="text-zone-paddind-left text-zone-center"><span class="Text-color-description">Prix ; </span><%= product.prix %> €</p>
-            <p class="text-zone-paddind-left text-zone-center"><span class="Text-color-description">Caracteristique ; </span><%= product.caracteristique %></p>
-            <p class="text-zone-paddind-left text-zone-center"><span class="Text-color-description">disponibilité ; </span><%= product.disponibilite %></p>
-            <a href="/catalogue" class="button-produit text-zone-paddind ">catalogue</a>
-        </article>
-        <div class="empty-space"></div>
-    </div>
+<div class="gridContainer">
+    <div class="espacement1ligne"></div> <!-- Colonne vide -->
+    <div class="imageContainerProduit"></div>
+    <div class="espacement1ligne"></div> <!-- Colonne vide -->
+</div>
 
-<%-include('partials/footer.ejs') %>
+<div class="gridContainerProduit">
+    <div class="espacement1ligne"></div> <!-- Colonne vide -->
+    <article class="textZone">
+        <p>
+            Publié le 11 avril 2025
+        </p>
+        
+        <h2>
+            <span class="textColorDescription"><%= product.type %></span>
+        </h2>
+        
+        <p>
+            <span class="textColorDescription">Description : </span>
+            <%= product.description %>
+        </p>
+        <p>
+            <span class="textColorDescription">Origine : </span>
+            <%= product.origine %>
+        </p>
+        <p>
+            <span class="textColorDescription">Prix : </span>
+            <%= product.prix %> €
+        </p>
+        
+        <p>
+            <span class="textColorDescription">Caractéristique : </span>
+            <%= product.caracteristique %>
+        </p>
+        <p>
+            <span class="textColorDescription">Disponibilité : </span>
+            <%= product.disponibilite %>
+        </p>
+        
+        <a href="/catalogue" class="buttonProduit text-zone-paddind">catalogue</a>
+    </article>
+ <div class="espacement1ligne"></div> <!-- Colonne vide -->
+</div>
 
+<%- include('partials/footer.ejs') %>

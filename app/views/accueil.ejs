@@ -1,48 +1,56 @@
 
- <%- include('partials/headerAccueil.ejs') %>
-    <div class="accueilTitreImage">
+<%- include('partials/headerAccueil.ejs') %>
 
-        <div class=" tittleTextlink">
-            <div class="titreAccueil">
-                <h1 class=" accueil"> Jean et Jacques Pepper : Quand le café devient une célébration de l'art de vivre.</h1>
-            </div>
-            <article>
-                <div class="accueil-notreAccroche" >
-                    <p >Bienvenue dans notre boutique, où règne une ambiance chaleureuse et accueillante qui éveille tous vos sens.
-                        Le personnel attentionné et passionné est toujours prêt à partager ses connaissances et ses recommandations, 
-                        "Le café, bien plus qu'une simple boisson, il est un véritable rituel 
-                        qui incarne l'art de vivre. Entre moments de partage et instants de 
-                        contemplation, chaque tasse devient une invitation à savourer la vie et à en célébrer
-                        les nuances.
-                        Que vous soyez un connaisseur de café ou un novice curieux, nous sommes là pour vous guider dans un voyage sensoriel inoubliable, où chaque gorgée révèle un monde de saveurs riches et complexes.</p>
-                </div>
-            </article>
-         
+<div class="accueilTitreImage">
+    <div class="tittleTextlink">
+        <div >
+            <h1 >
+                Jean et Jacques Pepper : Quand le café devient une célébration de l'art de vivre.
+            </h1>
         </div>
-            <figure class="imageContainer">
-                <img src="/images/105589090.png " alt="du café plein les mains" class="imageDroite">
-            </figure>
-            
-    </div>
-        <div class="buttonCatalogue">
-            <a href="/catalogue" class="button ">catalogue</a>
-        </div>
-    <section>
-        <div class="accueilTitreImage2"> 
-                <div class="nouveautés-titre">
-                    <h2>Nos nouveautés</h2>
-                </div>    
-        </div>
+        
         <article>
-            <div class=" cards">
-                <% cafes.forEach(cafe => { %>
-                <div class="card card-text ">
-                    <h3><%= cafe.type %></h3> 
-                    <P><%= cafe.description %></P>
-                    <a href="/produit/<%= cafe.id %>" class="buttonC">découvrir</a>
-                </div> <% }) %>
+            <div class="accueilNotreAccroche">
+                <p>
+                    Bienvenue dans notre boutique, où règne une ambiance chaleureuse et accueillante qui éveille tous vos sens.
+                    Le personnel attentionné et passionné est toujours prêt à partager ses connaissances et ses recommandations, 
+                    "Le café, bien plus qu'une simple boisson, il est un véritable rituel 
+                    qui incarne l'art de vivre. Entre moments de partage et instants de 
+                    contemplation, chaque tasse devient une invitation à savourer la vie et à en célébrer
+                    les nuances.
+                    Que vous soyez un connaisseur de café ou un novice curieux, nous sommes là pour vous guider dans un voyage sensoriel inoubliable, où chaque gorgée révèle un monde de saveurs riches et complexes.
+                </p>
             </div>
         </article>
-    </section>    
-    <%-include('partials/footer.ejs') %>
+    </div>
+    
+    <figure class="imageContainer">
+        <img src="/images/105589090.png" alt="du café plein les mains" class="imageDroite">
+    </figure>
+</div>
 
+<div class="buttonCatalogue">
+    <a href="/catalogue" class="button">catalogue</a>
+</div>
+
+<section>
+    <div > 
+        <div >
+            <h2 class="nouveautés">Nos nouveautés</h2>
+        </div>    
+    </div>
+    
+    <article>
+        <div class="cards">
+            <% cafes.forEach(cafe => { %>
+                <div class="card ">
+                    <h3><%= cafe.type %></h3> 
+                    <p><%= cafe.description %></p>
+                    <a href="/produit/<%= cafe.id %>" class="buttonC">découvrir</a>
+                </div> 
+            <% }) %>
+        </div>
+    </article>
+</section>    
+
+<%- include('partials/footer.ejs') %>

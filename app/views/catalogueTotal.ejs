@@ -1,35 +1,33 @@
 
 <%- include('partials/headerProduit.ejs') %>
-   <figure>
-        <div class="grid-container">
-            <div class="empty-space"></div>
-            <div class="image-container-catalogue">
-                <h1>Nos produits</h1>
-            </div>
-            <div class="empty-space"></div>
+
+<figure>
+    <div class="gridContainer">
+        <!-- <div class="empty-space"></div> -->
+         <div class="espacement1ligne"></div> <!-- Colonne vide -->
+        <div class="imageContainerCatalogue">
+            <h1>Nos produits</h1>
         </div>
-    </figure>
+         <div class="espacement1ligne"></div> <!-- Colonne vide -->
+    </div>
+</figure>
 
+<section class="catalogueCategorie">
+    <div class="espacement1ligne"></div> <!-- Colonne vide -->
+    <div class="espacement1ligne"></div> <!-- Colonne vide -->
+    <div class="droiteCategorie">
+        <a href="# lien vers la page catalogue" class="button">catégorie</a>
+    </div>
+</section>
 
-    <section class="catalogueCategorie">
-        <div class="gauche">" "</div>
-        <div class="centre">" "</div>
-        <div class="droiteCategorie">
-            <a href="# lien vers la page  catalogue" class="button ">catégorie</a>
-        </div>
-    </section>
+<section class="cards">
+    <% allCafes.forEach(cafe => { %>
+        <div class="card card-text">
+            <h3><%= cafe.type %></h3> 
+            <p><%= cafe.description %></p>
+            <a href="/produit/<%= cafe.id %>" class="buttonC">découvrir</a>                   
+        </div> 
+    <% }) %>
+</section>
 
-   
-    <section class=" cards">
-        <% allCafes.forEach(cafe => { %>
-            <div class="card card-text ">
-                <h3><%= cafe.type %></h3> 
-                <P><%= cafe.description %></P>
-                <a href="/produit/<%= cafe.id %>" class="buttonC" >découvrir</a>                   
-            </div> <% }) %>
-    </section>
-   
-<%-include('partials/footer.ejs') %>
-
-
-
+<%- include('partials/footer.ejs') %>
