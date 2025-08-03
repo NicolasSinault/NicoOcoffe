@@ -188,7 +188,7 @@ a {
     box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2); 
 }
 
-.nouveautés { 
+.nouveautes { 
     color: var(--beige);
     margin: 50px 0 30px 0;
     font-size: 2rem;
@@ -425,7 +425,7 @@ filter: brightness(1);
         margin-top: 20px; /* Espace avant les cartes */
     }
 
-    section .nouveautés {
+    section .nouveautes {
         text-align: center;
         padding-left: 0;
     }
