@@ -1,0 +1,31 @@
+<%- include('partials/header.ejs') %>
+
+<section>
+    <div class="message">
+        <h2>
+            Erreur 500 : Problème interne du serveur
+        </h2>
+        <p>
+            Désolé, une erreur s'est produite sur notre serveur. Prenons un café ensemble en attendant que nous résolvions le problème !
+        </p>
+        <% if (typeof error !== 'undefined' && error) { %>
+            <div class="error-details">
+                <p><strong>Détails de l'erreur :</strong> <%= error %></p>
+            </div>
+        <% } %>
+        <div class="action-buttons">
+            <a href="/" class="btn-home">Retour à l'accueil</a>
+            <a href="/catalogue" class="btn-catalogue">Voir notre catalogue</a>
+        </div>
+    </div>
+</section>
+
+<figure>
+    <div class="gridContainer500">
+       <div class="espacement1ligne"></div> <!-- Colonne vide -->
+            <div class="imageContainer500"></div> <!-- Colonne centrale avec image -->
+       <div class="espacement1ligne"></div> <!-- Colonne vide -->
+    </div>
+</figure>
+
+<%- include('partials/footer.ejs') %>

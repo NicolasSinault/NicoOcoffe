@@ -15,5 +15,7 @@ router.get("/produit/:id",GeneralController.showProduct);
 router.get("/erreur404",GeneralController.pageErreur);
 router.get("/rgpd",GeneralController.rgpd);
 
+router.get("/erreur500",GeneralController.pageErreur500);
+
 //exporte le routeur par defaut
 export default router;
