@@ -16,9 +16,10 @@ export const find3First = async () => {
 export const find3last = async () => {
     try {
         // Simulation d'erreur BDD si la variable d'environnement est activée
-        if (process.env.SIMULATE_DB_ERROR === 'true') {
-            throw new Error('Erreur de connexion à la base de données : Serveur PostgreSQL indisponible');
-        }
+        
+        // if (process.env.SIMULATE_DB_ERROR === 'true') {
+        //     throw new Error('Erreur de connexion à la base de données : Serveur PostgreSQL indisponible');
+        // }
         
         // etant donné qu'on veut juste récupérer la propriété rows de l'objet Result généré par pgPool.query, cette syntaxe permet de créer une variable en partant de la propriété rows
         // destructuring d'objet
